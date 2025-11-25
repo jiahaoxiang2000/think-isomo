@@ -53,6 +53,7 @@ typst compile think-isomo.typ
 ### Automated Releases
 
 When you push a version tag (e.g., `v1.0.0`), GitHub Actions automatically:
+
 1. Installs Source Han Serif fonts
 2. Compiles the document
 3. Creates a release with the PDF named `think-isomo-v1.0.0.pdf`
@@ -73,11 +74,6 @@ git push origin v1.0.0
   - Main content: Arabic numerals (1, 2, 3...)
 - **Theorem Environments**: Powered by the theorion package
 - **Bibliography Support**: IEEE-style citations
-- **Emoji Support**: Express yourself with emojis 😊
-
-## Contributing Guidelines
-
-This is a personal notes repository. For detailed contribution guidelines and file organization rules, please refer to [CLAUDE.md](CLAUDE.md).
 
 ## License
 
