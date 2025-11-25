@@ -5,14 +5,12 @@ on:
     tags:
       - "v*" # This workflow will run when any tag starting with 'v' is pushed
 
-# Add permissions configuration
-permissions:
-  contents: write
-
 jobs:
   build:
     name: Create Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
