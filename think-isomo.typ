@@ -183,6 +183,7 @@
 #include "review/2024-09-12.typ"
 #include "review/2025-05-14.typ"
 #include "review/2025-05-19.typ"
+#include "review/2025-11-25.typ"
 
 #include "misc/2025-04-03.typ"
 
