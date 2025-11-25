@@ -75,13 +75,10 @@ jobs:
           ls -la build || echo "No PDFs found in build"
 
       - name: Create Release
-        uses: softprops/action-gh-release@v1
-        with:
-          name: Release ${{ env.CURRENT_TAG }}
-          body: ${{ env.RELEASE_NOTES }}
-          draft: false
-          prerelease: false
-          files: |
+        run: |
+          gh release create "$CURRENT_TAG" \
+            --title "Release $CURRENT_TAG" \
+            --notes "$RELEASE_NOTES" \
             build/*.pdf
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
