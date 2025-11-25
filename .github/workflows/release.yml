@@ -56,4 +56,4 @@ jobs:
         with:
           artifacts: "build/*.pdf"
           generateReleaseNotes: true
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ github.token }}
