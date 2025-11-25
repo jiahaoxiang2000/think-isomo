@@ -77,8 +77,9 @@ jobs:
       - name: Create Release
         run: |
           gh release create "$CURRENT_TAG" \
+            --repo "${{ github.repository }}" \
             --title "Release $CURRENT_TAG" \
             --notes "$RELEASE_NOTES" \
             build/*.pdf
         env:
-          GH_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
