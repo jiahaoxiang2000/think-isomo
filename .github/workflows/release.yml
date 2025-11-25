@@ -26,10 +26,10 @@ jobs:
           sudo apt-get install -y wget unzip fontconfig
 
           # Download and install Source Han Serif
-          wget -q https://github.com/adobe-fonts/source-han-serif/releases/download/2.002R/09_SourceHanSerifCN.zip
-          unzip -q 09_SourceHanSerifCN.zip -d source-han-serif
+          wget -q https://github.com/adobe-fonts/source-han-serif/releases/download/2.003R/09_SourceHanSerifSC.zip
+          unzip -q 09_SourceHanSerifSC.zip -d source-han-serif
           sudo mkdir -p /usr/share/fonts/opentype/source-han-serif
-          sudo cp source-han-serif/SubsetOTF/CN/*.otf /usr/share/fonts/opentype/source-han-serif/
+          sudo cp source-han-serif/SubsetOTF/SC/*.otf /usr/share/fonts/opentype/source-han-serif/
           sudo fc-cache -fv
 
           # Verify font installation
