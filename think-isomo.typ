@@ -15,7 +15,6 @@
 #set page(
   paper: "a4",
   margin: (left: 2.5cm, right: 2.5cm, top: 3cm, bottom: 3cm),
-  numbering: "1",
   number-align: center,
   header: context {
     if counter(page).get().first() > 1 {
@@ -136,7 +135,10 @@
 
 #pagebreak()
 
-// Table of contents
+// Table of contents with Roman numerals
+#set page(numbering: "i")
+#counter(page).update(1)
+
 #outline(
   title: [Table of Contents],
   indent: auto,
@@ -159,6 +161,10 @@
 + 对于*内容*来说，可以是英文也可以中文，这个得益于新的_typst_的排版引擎@typst2024documentation，可以很好的处理中英文混排。还可以有emoji👿，真的是很爽。还可以有文章引用，比之前排版ctex👌蛮多的@ctex2020manual.
 
 #pagebreak()
+
+// Reset page numbering to Arabic numerals for main content
+#set page(numbering: "1")
+#counter(page).update(1)
 
 // ============================================================================
 // Content Sections - Include sub-files
