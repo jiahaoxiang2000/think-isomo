@@ -56,3 +56,4 @@ jobs:
         with:
           artifacts: "build/*.pdf"
           generateReleaseNotes: true
+          token: '${{ secrets.PERSONAL_ACCESS_TOKEN }}'
