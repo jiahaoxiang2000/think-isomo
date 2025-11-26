@@ -58,27 +58,54 @@
 
   #figure(
     caption: [从推理到验证的筛选过程],
-    {
-      import "@preview/cetz:0.3.1": canvas, draw
-      canvas({
-        import draw: *
+    align(center)[
+      #box(
+        width: 8cm,
+        height: 7cm,
+        {
+          place(
+            center + horizon,
+            circle(
+              radius: 3.2cm,
+              stroke: gray + 2pt,
+              fill: gray.lighten(85%),
+            ),
+          )
+          place(
+            center + top,
+            dy: 0.5cm,
+            text(fill: gray)[*Sound* \ #text(size: 0.75em)[推理与猜测]],
+          )
 
-        // Sound - 最外层（推理、假设、猜测）
-        circle((0, 0), radius: 3.2, stroke: gray + 2pt, fill: gray.lighten(85%), name: "sound")
-        content((0, 2.7), [*Sound*], anchor: "center", fill: gray)
-        content((0, 2.3), text(size: 0.75em)[推理与猜测], anchor: "center")
+          place(
+            center + horizon,
+            circle(
+              radius: 2cm,
+              stroke: blue + 1.8pt,
+              fill: blue.lighten(80%),
+            ),
+          )
+          place(
+            center + top,
+            dy: 1.7cm,
+            text(fill: blue)[*Truth* \ #text(size: 0.7em)[真实存在]],
+          )
 
-        // Truth - 中间层（实际为真的事实）
-        circle((0, 0), radius: 2, stroke: blue + 1.8pt, fill: blue.lighten(80%), name: "truth")
-        content((0, 1.6), [*Truth*], anchor: "center", fill: blue)
-        content((0, 1.2), text(size: 0.7em)[真实存在], anchor: "center", fill: blue)
-
-        // Complete - 最内层（已验证证明的知识）
-        circle((0, 0), radius: 1, stroke: green + 1.5pt, fill: green.lighten(70%), name: "complete")
-        content((0, 0), [*Complete*], anchor: "center", fill: green)
-        content((0, -0.4), text(size: 0.7em)[已证明], anchor: "center")
-      })
-    },
+          place(
+            center + horizon,
+            circle(
+              radius: 1cm,
+              stroke: green + 1.5pt,
+              fill: green.lighten(70%),
+            ),
+          )
+          place(
+            center + horizon,
+            text(fill: green)[*Complete* \ #text(size: 0.7em)[已证明]],
+          )
+        },
+      )
+    ],
   )
 ]
 
@@ -123,39 +150,4 @@
   这正是现代AI的核心哲学：*不求完美，但求可用*。
   我们用概率的不确定性，交换了计算的可行性。
 ]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
