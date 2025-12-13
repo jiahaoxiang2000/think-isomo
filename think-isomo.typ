@@ -75,6 +75,33 @@
 // Configure theorem environments with theorion
 #show: show-theorion
 
+// Style all links with blue color and underline
+#show link: it => {
+  set text(fill: rgb("#1E90FF"))
+  underline(it)
+}
+
+// Customize reference display to show section number and title
+#show ref: it => {
+  let styled-content = if it.element != none and it.element.func() == heading {
+    let el = it.element
+    let number = if el.numbering != none {
+      numbering(el.numbering, ..counter(heading).at(el.location()))
+    }
+    if number != none {
+      link(it.target)[ #el.body]
+    } else {
+      link(it.target)[#el.body]
+    }
+  } else {
+    it
+  }
+
+  // Apply blue color and underline to all references
+  set text(fill: rgb("#1E90FF"))
+  underline(styled-content)
+}
+
 // Figure and table numbering (section-based, resets per section)
 #set figure(numbering: num => {
   let h = counter(heading).get().first()
@@ -184,6 +211,7 @@
 #include "review/2025-05-14.typ"
 #include "review/2025-05-19.typ"
 #include "review/2025-11-25.typ"
+#include "review/2025-12-13.typ"
 
 #include "misc/2025-04-03.typ"
 
