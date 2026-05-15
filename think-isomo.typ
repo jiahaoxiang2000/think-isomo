@@ -1,8 +1,8 @@
 #import "@preview/theorion:0.3.2": *
 
 // Document configuration
-#let title = "Think Notes - isomo"
-#let author = "isomo"
+#let title = "Think Notes - isomoes"
+#let author = "isomoes"
 #let date = datetime.today()
 
 // Custom color scheme inspired by elegant academic style

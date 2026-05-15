@@ -1,4 +1,4 @@
-# Think Notes - isomo
+# Think Notes - isomoes
 
 Personal reflections and thoughts organized by topic and timeline, beautifully typeset with Typst.
 
