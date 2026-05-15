@@ -12,7 +12,7 @@ The notes are organized by topic folders, with each file named by date:
 
 ```
 think-isomo/
-├── think-isomo.typ          # Main document
+├── think-isomoes.typ        # Main document
 ├── common.typ               # Shared utilities and theorem environments
 ├── references.bib           # Bibliography
 ├── adjust/                  # Adjustment and adaptation topics
@@ -47,7 +47,7 @@ think-isomo/
 ### Local Compilation
 
 ```bash
-typst compile think-isomo.typ
+typst compile think-isomoes.typ
 ```
 
 ### Automated Releases
@@ -56,7 +56,7 @@ When you push a version tag (e.g., `v1.0.0`), GitHub Actions automatically:
 
 1. Installs Source Han Serif fonts
 2. Compiles the document
-3. Creates a release with the PDF named `think-isomo-v1.0.0.pdf`
+3. Creates a release with the PDF named `think-isomoes-v1.0.0.pdf`
 
 To create a release:
 

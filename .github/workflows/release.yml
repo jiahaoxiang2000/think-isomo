@@ -64,8 +64,8 @@ jobs:
       - name: Compile Typst document
         run: |
           mkdir -p build
-          echo "Compiling think-isomo.typ"
-          typst compile --root . think-isomo.typ "build/think-isomo-${CURRENT_TAG}.pdf"
+          echo "Compiling think-isomoes.typ"
+          typst compile --root . think-isomoes.typ "build/think-isomoes-${CURRENT_TAG}.pdf"
 
       - name: List generated PDFs
         run: |

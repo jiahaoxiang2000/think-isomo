@@ -18,7 +18,7 @@ Use folders to organize content by topic, with date-based file names:
 
 ```
 think/typst/
-├── think-isomo.typ          # Main file
+├── think-isomoes.typ        # Main file
 ├── references.bib           # Bibliography
 ├── algorithm/               # Algorithm topic folder
 │   ├── 2024-01-15.typ
@@ -43,7 +43,7 @@ think/typst/
 ## Referencing in Main File
 
 ```typst
-// In think-isomo.typ, reference sub-files by folder and date
+// In think-isomoes.typ, reference sub-files by folder and date
 #include "algorithm/2024-01-15.typ"
 #include "system-design/2024-02-15.typ"
 #include "paper-review/2024-03-05.typ"
